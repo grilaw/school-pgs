@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Сайдбар sky-800 + светлый контент</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- Родительский контейнер: занимает всю высоту экрана -->
+    <div class="flex h-screen">
+      <!-- ========================================== -->
+      <!-- САЙДБАР (sky-800) -->
+      <!-- ========================================== -->
+      <aside class="w-64 bg-sky-800 text-white flex flex-col p-6 shadow-xl">
+        <!-- Логотип -->
+        <div class="flex items-center gap-3 mb-10">
+          <div
+            class="w-8 h-8 bg-sky-400 rounded-lg flex items-center justify-center text-sky-900 font-bold text-sm"
+          >
+            Л
+          </div>
+          <span class="text-xl font-semibold tracking-tight">Мой Проект</span>
+        </div>
+
+        <!-- Навигация -->
+        <nav class="flex-1 space-y-1">
+          <a
+            href="#"
+            class="flex items-center gap-3 px-4 py-2.5 rounded-lg bg-sky-700/50 text-white"
+          >
+            <span>🏠</span> Главная
+          </a>
+          <a
+            href="#"
+            class="flex items-center gap-3 px-4 py-2.5 rounded-lg hover:bg-sky-700/50 transition-colors text-sky-200 hover:text-white"
+          >
+            <span>📊</span> Статистика
+          </a>
+          <a
+            href="#"
+            class="flex items-center gap-3 px-4 py-2.5 rounded-lg hover:bg-sky-700/50 transition-colors text-sky-200 hover:text-white"
+          >
+            <span>👥</span> Пользователи
+          </a>
+          <a
+            href="#"
+            class="flex items-center gap-3 px-4 py-2.5 rounded-lg hover:bg-sky-700/50 transition-colors text-sky-200 hover:text-white"
+          >
+            <span>⚙️</span> Настройки
+          </a>
+        </nav>
+
+        <!-- Профиль внизу -->
+        <div class="border-t border-sky-700 pt-4 mt-4 flex items-center gap-3">
+          <div
+            class="w-9 h-9 rounded-full bg-sky-600 flex items-center justify-center text-sm font-medium"
+          >
+            АП
+          </div>
+          <div>
+            <div class="text-sm font-medium">Алексей Петров</div>
+            <div class="text-xs text-sky-300">alex@mail.ru</div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- ========================================== -->
+      <!-- ОСНОВНОЙ КОНТЕНТ (bg-sky-50) -->
+      <!-- ========================================== -->
+      <main class="flex-1 bg-sky-50 p-8 overflow-y-auto">
+        <!-- Шапка контента -->
+        <div class="flex justify-between items-center mb-8">
+          <h1 class="text-2xl font-bold text-slate-800">
+            📋 Панель управления
+          </h1>
+          <button
+            class="bg-sky-800 text-white px-5 py-2 rounded-xl hover:bg-sky-700 transition shadow-md text-sm"
+          >
+            + Создать
+          </button>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- КАРТОЧКИ СТАТИСТИКИ (на белом фоне) -->
+        <!-- ========================================== -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <div class="bg-white p-6 rounded-2xl shadow-sm border border-sky-100">
+            <div class="text-sm text-slate-500">Всего заказов</div>
+            <div class="text-3xl font-bold text-slate-800 mt-1">1,284</div>
+            <div class="text-xs text-emerald-600 mt-2">↑ +12% за месяц</div>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl shadow-sm border border-sky-100">
+            <div class="text-sm text-slate-500">Доход</div>
+            <div class="text-3xl font-bold text-slate-800 mt-1">₽ 45 230</div>
+            <div class="text-xs text-emerald-600 mt-2">↑ +8.3% за месяц</div>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl shadow-sm border border-sky-100">
+            <div class="text-sm text-slate-500">Новые клиенты</div>
+            <div class="text-3xl font-bold text-slate-800 mt-1">36</div>
+            <div class="text-xs text-sky-600 mt-2">↗ на этой неделе</div>
+          </div>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- ТАБЛИЦА / СПИСОК (на белом фоне) -->
+        <!-- ========================================== -->
+        <div class="bg-white rounded-2xl shadow-sm border border-sky-100 p-6">
+          <h2 class="text-lg font-semibold text-slate-700 mb-4">
+            📌 Последние активности
+          </h2>
+
+          <div class="divide-y divide-slate-100">
+            <div class="py-3 flex justify-between items-center">
+              <div>
+                <p class="text-sm font-medium text-slate-700">
+                  Иван заказал "Сайт-визитка"
+                </p>
+                <p class="text-xs text-slate-400">Сегодня, 14:23</p>
+              </div>
+              <span
+                class="bg-sky-100 text-sky-700 text-xs px-3 py-1 rounded-full"
+                >Новый</span
+              >
+            </div>
+
+            <div class="py-3 flex justify-between items-center">
+              <div>
+                <p class="text-sm font-medium text-slate-700">
+                  Оплата от ООО "Ромашка"
+                </p>
+                <p class="text-xs text-slate-400">Сегодня, 11:05</p>
+              </div>
+              <span
+                class="bg-emerald-100 text-emerald-700 text-xs px-3 py-1 rounded-full"
+                >Завершён</span
+              >
+            </div>
+
+            <div class="py-3 flex justify-between items-center">
+              <div>
+                <p class="text-sm font-medium text-slate-700">
+                  Мария обновила тариф
+                </p>
+                <p class="text-xs text-slate-400">Вчера, 18:42</p>
+              </div>
+              <span
+                class="bg-amber-100 text-amber-700 text-xs px-3 py-1 rounded-full"
+                >В обработке</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Подпись внизу -->
+        <p class="text-xs text-slate-400 mt-6 text-center">
+          Вы вошли как администратор · Последний вход: сегодня в 09:30
+        </p>
+      </main>
+    </div>
+  </body>
+</html>
